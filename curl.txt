@@ -1,0 +1,7 @@
+curl -i -H "Content-type: application/json" -X POST -d '{"title": "Nueva Tarea", "description": "Nueva Descripcion"}' http://127.0.0.1:5000/api/v1/tasks
+
+curl -i -H "Content-type: application/json" -X POST -d '{"title": "Nueva tarea", "description": "Nueva description"}' http://127.0.0.1:5000/api/v1/tasks
+
+curl -i -H "Content-type: application/json" -X PUT -d '{"title": "Cambio Completo de titulo tarea", "description": "Nueva description"}' http://127.0.0.1:5000/api/v1/tasks/1
+
+curl -i -H "Content-type: application/json" -X POST -d '{"title": "Nueva Tarea", "description": "Nueva Descripcion", "deadline":"123"}' http://127.0.0.1:5000/api/v1/tasks

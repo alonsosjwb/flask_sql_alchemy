@@ -1,0 +1,21 @@
+Obtener el listado de tareas.
+curl -i -H "Content-type: application/json" http://127.0.0.1:5000/api/v1/tasks
+
+Ordenamiento.
+curl -i -H "Content-type: application/json" http://127.0.0.1:5000/api/v1/tasks?order=asc
+
+Paginación
+curl -i -H "Content-type: application/json" http://127.0.0.1:5000/api/v1/tasks?order=asc&page=1
+
+Obtener tarea cuyo id es 1.
+curl -i -H "Content-type: application/json" http://127.0.0.1:5000/api/v1/tasks/1
+
+Crear una nueva tarea.
+curl -i -H "Content-type: application/json" -X POST -d '{"title": "Nueva tarea", "description":
+"Nueva description", "deadline": "2019-12-12 12:00:00"}' http://127.0.0.1:5000/api/v1/tasks
+
+Actualizar tarea cuyo id es 1.
+curl -i -H "Content-type: application/json" -X PUT -d '{"title": "Nueva descripción"}' http://127.0.0.1:5000/api/v1/tasks/1
+
+Eliminar tarea.
+curl -i -H "Content-type: application/json" -X DELETE http://127.0.0.1:5000/api/v1/tasks/1
